@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TheCalculator</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_about_page">AboutPage</string>
+    <string name="creator">Created by YouKnowWho\nDate: 6/15/2015\nTime: 10:19 PM</string>
+    <string name="aboutMe">My name is TheCalculator. I am THE basic calculator.
+    I WILL be of major assistance to you in your Math courses! USE ME!!!</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3040119163649827/6080793795</string>
+    <string name="title_activity_show_saved_data">ShowSavedData</string>
+
+</resources>
