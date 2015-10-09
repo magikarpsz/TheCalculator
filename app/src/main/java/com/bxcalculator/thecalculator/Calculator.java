@@ -50,6 +50,8 @@ public class Calculator extends ActionBarActivity {
                 R.id.clear, R.id.negative, R.id.allclear, R.id.dot};
 
         mAdView = (AdView) findViewById(R.id.adView);
+
+        // advertisement
         interstitialAd = new InterstitialAd(this);
         interstitialAd.setAdUnitId("ca-app-pub-3040119163649827/7917453791"); //ca-app-pub-3940256099942544/1033173712
         //ca-app-pub-3940256099942544/6300978111 Banner Test
@@ -121,47 +123,47 @@ public class Calculator extends ActionBarActivity {
 
                         case R.id.one:
                             count++;
-                            one();
+                            oneToNine("1");
                             break;
 
                         case R.id.two:
                             count++;
-                            two();
+                            oneToNine("2");
                             break;
 
                         case R.id.three:
                             count++;
-                            three();
+                            oneToNine("3");
                             break;
 
                         case R.id.four:
                             count++;
-                            four();
+                            oneToNine("4");
                             break;
 
                         case R.id.five:
                             count++;
-                            five();
+                            oneToNine("5");
                             break;
 
                         case R.id.six:
                             count++;
-                            six();
+                            oneToNine("6");
                             break;
 
                         case R.id.seven:
                             count++;
-                            seven();
+                            oneToNine("7");
                             break;
 
                         case R.id.eight:
                             count++;
-                            eight();
+                            oneToNine("8");
                             break;
 
                         case R.id.nine:
                             count++;
-                            nine();
+                            oneToNine("9");
                             break;
 
                         case R.id.zero:
@@ -213,226 +215,26 @@ public class Calculator extends ActionBarActivity {
         }
     }
 
-    public void one(){
+    public void oneToNine(String x){
         if(num != 0 && operation != null) {
             for (int i = 0; i < (count -  temp.length()); i++) {
-                temp = temp + "1";
+                temp = temp + x;
             }
             input.setText(current + " " + temp);
             num = Integer.parseInt(temp);
         }
         else if(num != 0 && operation == null) {
             for (int i = 0; i < (count - temp.length()); i++) {
-                temp = temp + "1";
+                temp = temp + x;
             }
             holder = temp;
             input.setText(holder);
             sum = Integer.parseInt(temp);
         }
         else{
-            num = 1;
+            num = Integer.parseInt(x);
             sum = num;
-            temp = temp + "1";
-            holder = Integer.toString(num);
-            input.setText(holder);
-        }
-    }
-
-    public void two(){
-        if(num != 0 && operation != null) {
-            for (int i = 0; i < (count -  temp.length()); i++) {
-                temp = temp + "2";
-            }
-            input.setText(current + " " + temp);
-            num = Integer.parseInt(temp);
-        }
-        else if(num != 0 && operation == null) {
-            for (int i = 0; i < (count - temp.length()); i++) {
-                temp = temp + "2";
-            }
-            holder = temp;
-            input.setText(holder);
-            sum = Integer.parseInt(temp);
-        }
-        else{
-            num = 2;
-            sum = num;
-            temp = temp + "2";
-            holder = Integer.toString(num);
-            input.setText(holder);
-        }
-    }
-
-    public void three(){
-        if(num != 0 && operation != null) {
-            for (int i = 0; i < (count -  temp.length()); i++) {
-                temp = temp + "3";
-            }
-            input.setText(current + " " + temp);
-            num = Integer.parseInt(temp);
-        }
-        else if(num != 0 && operation == null) {
-            for (int i = 0; i < (count - temp.length()); i++) {
-                temp = temp + "3";
-            }
-            holder = temp;
-            input.setText(holder);
-            sum = Integer.parseInt(temp);
-        }
-        else{
-            num = 3;
-            sum = num;
-            temp = temp + "3";
-            holder = Integer.toString(num);
-            input.setText(holder);
-        }
-    }
-
-    public void four(){
-        if(num != 0 && operation != null) {
-            for (int i = 0; i < (count -  temp.length()); i++) {
-                temp = temp + "4";
-            }
-            input.setText(current + " " + temp);
-            num = Integer.parseInt(temp);
-        }
-        else if(num != 0 && operation == null) {
-            for (int i = 0; i < (count - temp.length()); i++) {
-                temp = temp + "4";
-            }
-            holder = temp;
-            input.setText(holder);
-            sum = Integer.parseInt(temp);
-        }
-        else{
-            num = 4;
-            sum = num;
-            temp = temp + "4";
-            holder = Integer.toString(num);
-            input.setText(holder);
-        }
-    }
-
-    public void five(){
-        if(num != 0 && operation != null) {
-            for (int i = 0; i < (count -  temp.length()); i++) {
-                temp = temp + "5";
-            }
-            input.setText(current + " " + temp);
-            num = Integer.parseInt(temp);
-        }
-        else if(num != 0 && operation == null) {
-            for (int i = 0; i < (count - temp.length()); i++) {
-                temp = temp + "5";
-            }
-            holder = temp;
-            input.setText(holder);
-            sum = Integer.parseInt(temp);
-        }
-        else{
-            num = 5;
-            sum = num;
-            temp = temp + "5";
-            holder = Integer.toString(num);
-            input.setText(holder);
-        }
-    }
-
-    public void six(){
-        if(num != 0 && operation != null) {
-            for (int i = 0; i < (count -  temp.length()); i++) {
-                temp = temp + "6";
-            }
-            input.setText(current + " " + temp);
-            num = Integer.parseInt(temp);
-        }
-        else if(num != 0 && operation == null) {
-            for (int i = 0; i < (count - temp.length()); i++) {
-                temp = temp + "6";
-            }
-            holder = temp;
-            input.setText(holder);
-            sum = Integer.parseInt(temp);
-        }
-        else{
-            num = 6;
-            sum = num;
-            temp = temp + "6";
-            holder = Integer.toString(num);
-            input.setText(holder);
-        }
-    }
-
-    public void seven(){
-        if(num != 0 && operation != null) {
-            for (int i = 0; i < (count -  temp.length()); i++) {
-                temp = temp + "7";
-            }
-            input.setText(current + " " + temp);
-            num = Integer.parseInt(temp);
-        }
-        else if(num != 0 && operation == null) {
-            for (int i = 0; i < (count - temp.length()); i++) {
-                temp = temp + "7";
-            }
-            holder = temp;
-            input.setText(holder);
-            sum = Integer.parseInt(temp);
-        }
-        else{
-            num = 7;
-            sum = num;
-            temp = temp + "7";
-            holder = Integer.toString(num);
-            input.setText(holder);
-        }
-    }
-
-    public void eight(){
-        if(num != 0 && operation != null) {
-            for (int i = 0; i < (count -  temp.length()); i++) {
-                temp = temp + "8";
-            }
-            input.setText(current + " " + temp);
-            num = Integer.parseInt(temp);
-        }
-        else if(num != 0 && operation == null) {
-            for (int i = 0; i < (count - temp.length()); i++) {
-                temp = temp + "8";
-            }
-            holder = temp;
-            input.setText(holder);
-            sum = Integer.parseInt(temp);
-        }
-        else{
-            num = 8;
-            sum = num;
-            temp = temp + "8";
-            holder = Integer.toString(num);
-            input.setText(holder);
-        }
-    }
-
-    public void nine(){
-        if(num != 0 && operation != null) {
-            for (int i = 0; i < (count -  temp.length()); i++) {
-                temp = temp + "9";
-            }
-            input.setText(current + " " + temp);
-            num = Integer.parseInt(temp);
-        }
-        else if(num != 0 && operation == null) {
-            for (int i = 0; i < (count - temp.length()); i++) {
-                temp = temp + "9";
-            }
-            holder = temp;
-            input.setText(holder);
-            sum = Integer.parseInt(temp);
-        }
-        else{
-            num = 9;
-            sum = num;
-            temp = temp + "9";
+            temp = temp + x;
             holder = Integer.toString(num);
             input.setText(holder);
         }
