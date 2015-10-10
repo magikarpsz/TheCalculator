@@ -23,7 +23,7 @@ import java.util.Date;
 public class Calculator extends ActionBarActivity {
 
     TextView input, result;
-    String current, operation, holder, temp = "";
+    String current, operation, holder, temp = "", binNum="";
     int sum = 0, num = 0, count = 0, adCount = 0, decCount = 0, negCount = 0;
     String holder1, holder2;
     double sum2 = 0;
@@ -171,8 +171,11 @@ public class Calculator extends ActionBarActivity {
                             zero();
                             break;
 
-                        /*case R.id.negative:
-                            negative();*/
+                        case R.id.negative:
+                            negative(sum);
+                            result.setText(binNum);
+                            binNum = "";
+                            break;
                         default:
                     }
                 }
@@ -264,16 +267,21 @@ public class Calculator extends ActionBarActivity {
             input.setText(holder);
         }
     }
- /*
-    TODO:
-    public void negative(){
-        if(num !=0 && operation != null){
+
+    //TODO:
+    public void negative(int n){
+        /*if(num !=0 && operation != null){
             input.setText(current + " -");
         }
-        else{
+        else {
             input.setText("-");
+        }*/
+            //result.setText("-" + sum);
+        if(n / 2 != 0) {
+            negative(n /2);
         }
-    }*/
+        binNum = binNum + Integer.toString(n%2);
+    }
 
     /*
         TODO: Dot
